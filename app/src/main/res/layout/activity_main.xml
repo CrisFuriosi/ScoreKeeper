@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/soccer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TeamTitleStyle"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/team1" />
+
+            <TextView
+                style="@style/TeamTitleStyle"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/team2" />
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/team1_plus_score"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam1Score"
+                android:text="@string/plus" />
+
+            <TextView
+                android:id="@+id/team_1_score"
+                style="@style/metricValueStyle"
+                android:layout_toEndOf="@id/team1_plus_score"
+                android:layout_toRightOf="@id/team1_plus_score"
+                android:text="@string/zero" />
+
+            <TextView
+                style="@style/metricNameStyle"
+                android:text="@string/scores" />
+
+            <TextView
+                android:id="@+id/team_2_score"
+                style="@style/metricValueStyle"
+                android:layout_toLeftOf="@id/team2_plus_score"
+                android:layout_toStartOf="@id/team2_plus_score"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/team2_plus_score"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam2Score"
+                android:text="@string/plus" />
+        </RelativeLayout>
+
+        <View style="@style/SeparatorLineStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/team1_plus_fouls"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam1Fouls"
+                android:text="@string/plus" />
+
+            <TextView
+                android:id="@+id/team_1_fouls"
+                style="@style/metricValueStyle"
+                android:layout_toEndOf="@id/team1_plus_fouls"
+                android:layout_toRightOf="@id/team1_plus_fouls"
+                android:text="@string/zero" />
+
+            <TextView
+                style="@style/metricNameStyle"
+                android:text="@string/fouls" />
+
+            <TextView
+                android:id="@+id/team_2_fouls"
+                style="@style/metricValueStyle"
+                android:layout_toLeftOf="@id/team2_plus_fouls"
+                android:layout_toStartOf="@id/team2_plus_fouls"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/team2_plus_fouls"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam2Fouls"
+                android:text="@string/plus" />
+        </RelativeLayout>
+
+        <View style="@style/SeparatorLineStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/team1_plus_corners"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam1Corners"
+                android:text="@string/plus" />
+
+            <TextView
+                android:id="@+id/team_1_corners"
+                style="@style/metricValueStyle"
+                android:layout_toEndOf="@id/team1_plus_corners"
+                android:layout_toRightOf="@id/team1_plus_corners"
+                android:text="@string/zero" />
+
+            <TextView
+                style="@style/metricNameStyle"
+                android:text="@string/corners" />
+
+            <TextView
+                android:id="@+id/team_2_corners"
+                style="@style/metricValueStyle"
+                android:layout_toLeftOf="@id/team2_plus_corners"
+                android:layout_toStartOf="@id/team2_plus_corners"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/team2_plus_corners"
+                style="@style/button"
+                android:layout_width="@dimen/button_width"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="add1ToTeam2Corners"
+                android:text="@string/plus" />
+        </RelativeLayout>
+
+        <View style="@style/SeparatorLineStyle" />
+
+        <Button
+            android:id="@+id/Reset"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:onClick="resetScore"
+            android:text="@string/reset" />
+    </LinearLayout>
+</ScrollView>
